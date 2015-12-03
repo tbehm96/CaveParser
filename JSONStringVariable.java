@@ -7,13 +7,20 @@ public class JSONStringVariable extends JSONVariable
 		super(name);
 		this.value = value;
 	}
+	
+	
+	public String getValue() {
+		return value;
+	}
+
+
 	public void display()
 	{
 		System.out.println("String : " + this.name + " -> " + this.value);
 	}
 	
 	@Override
-	public String exportToJSON() 
+	String exportToJSON() 
 	{
 		return "\"" + this.name + "\":\"" + this.value + "\"";
 	}

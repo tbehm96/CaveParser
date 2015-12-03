@@ -8,6 +8,12 @@ public class JSONObjectVariable extends JSONVariable
 		this.value = value;
 	}
 
+	
+	public JSONObject getValue() {
+		return value;
+	}
+
+
 	void display() 
 	{
 		System.out.println(this.name +" -> ");
@@ -15,8 +21,10 @@ public class JSONObjectVariable extends JSONVariable
 	}
 
 	@Override
-	public String exportToJSON() 
+	String exportToJSON() 
 	{
-		return "\"" + this.name + "\"{\"" + this.value + "\"}";
+		String answer = "\"" + this.name + "\":";
+		answer += this.value.exportToJSON();
+		return answer;
 	}
 }
