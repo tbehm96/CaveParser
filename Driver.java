@@ -10,5 +10,4 @@ public class Driver
 		Player thePlayer = new Player("Prof Locklair");
 		theCave.addPlayer(thePlayer);
 	}
-	
 }
